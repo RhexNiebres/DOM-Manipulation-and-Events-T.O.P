@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <button onclick="alert('hello,world')">Click me</button>
     <button id="btn">click me too</button>
     <button id="btn2">click me too</button>
+    <button onclick="alertFunction()">Click me Baby</button>
+    <button id="btn3">click me baby</button>
+
     <script>
+      // ways to add alert into a button using events
       const btn = document.querySelector("#btn");
       btn.onclick = () => alert("Hello, World!");
 
@@ -17,6 +22,24 @@
 
       btn2.addEventListener("click", () => {
         alert("The, World!");
+      });
+
+      function alertFunction() {
+        //using named function method 1
+        alert("YAY! YOU DID IT!");
+      }
+
+      function alertFunction2() {
+        //using named function method 2
+        alert("YAY! YOU DID IT!");
+      }
+
+      btn3.onclick = alertFunction2;
+      // use named function for cleaner code
+      btn3.addEventListener("click", alertFunction2);
+
+      btn3.addEventListener("click", function (e) {
+        e.target.style.background = "blue";
       });
     </script>
   </body>
