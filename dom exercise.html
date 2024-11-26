@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is a test</h1>
+    <div id="container"></div>
+
+    <script>
+      const paraContent = document.createElement("div");
+      paraContent.classList.add("paraContent");
+      paraContent.textContent = "Hey I'm red!";
+      paraContent.style.color = "red";
+
+      container.appendChild(paraContent);
+
+      const h3Content = document.createElement("h3");
+      h3Content.classList.add("h3Content");
+      h3Content.textContent = "I'm a blue h3!";
+      h3Content.style.color = "blue";
+
+      container.appendChild(h3Content);
+
+      const divcontent = document.createElement("div"); //create element
+      divcontent.classList.add("divcontent"); //name of element
+      divcontent.setAttribute("style", "color: black; background: pink;"); //add several style
+      divcontent.style.borderStyle = "solid"; //style for border
+
+      container.appendChild(divcontent); //add divcontent to container
+
+      const h1Content = document.createElement("h1");
+      h1Content.classList.add("h1");
+      h1Content.textContent = "I’m in a div";
+
+      divcontent.appendChild(h1Content); //add h1content inside of divcontent
+
+      const pContent = document.createElement("p");
+      pContent.classList.add("p");
+      pContent.textContent = "me too!";
+
+      divcontent.appendChild(pContent); //add pcontent inside of divcontent
+    </script>
+  </body>
+</html>
