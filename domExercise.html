@@ -26,19 +26,19 @@
       <button id="addButton">Add item</button>
     </div>
 
-    <ul id="cart"></ul>
+    <ul id="shopping-list"></ul>
 
     <script>
       const shoppingList = document.getElementById("shopping-list");
       const itemInput = document.getElementById("item");
-      const addButton = document.getElementById("add-button");
+      const addButton = document.getElementById("addButton");
 
       addButton.addEventListener("click", function () {
         const itemValue = itemInput.value;
 
         itemInput.value = "";
 
-        if (itemValue.trim) {
+        if (itemValue.trim()) {
           return;
         }
 
@@ -60,6 +60,8 @@
 
         itemInput.focus();
       });
+
+      itemInput.focus();
     </script>
   </body>
 </html>
